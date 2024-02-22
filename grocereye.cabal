@@ -1,0 +1,163 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.36.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           grocereye
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/grocereye#readme>
+homepage:       https://github.com/githubuser/grocereye#readme
+bug-reports:    https://github.com/githubuser/grocereye/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2024 Author name here
+license:        BSD-3-Clause
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/grocereye
+
+library
+  exposed-modules:
+      Grocereye
+      Grocereye.Image.Api
+      Grocereye.Image.Database
+      Grocereye.Image.ObjectDetection
+  other-modules:
+      Paths_grocereye
+  autogen-modules:
+      Paths_grocereye
+  hs-source-dirs:
+      src
+  default-extensions:
+      ConstraintKinds
+      DeriveAnyClass
+      DeriveGeneric
+      FlexibleContexts
+      OverloadedStrings
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      aeson
+    , base >=4.14 && <5
+    , blaze-html
+    , bytestring
+    , classy-prelude
+    , data-has
+    , filepath
+    , http-client
+    , http-client-tls
+    , http-types
+    , lens
+    , lens-aeson
+    , mtl
+    , postgresql-simple
+    , postgresql-simple-migration
+    , resource-pool
+    , safe
+    , scotty
+    , text
+    , transformers
+    , wai
+    , wai-cors
+    , wai-extra
+    , wai-middleware-static
+    , warp
+    , warp-tls
+  default-language: Haskell2010
+
+executable grocereye-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_grocereye
+  autogen-modules:
+      Paths_grocereye
+  hs-source-dirs:
+      app
+  default-extensions:
+      ConstraintKinds
+      DeriveAnyClass
+      DeriveGeneric
+      FlexibleContexts
+      OverloadedStrings
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.14 && <5
+    , blaze-html
+    , bytestring
+    , classy-prelude
+    , data-has
+    , filepath
+    , grocereye
+    , http-client
+    , http-client-tls
+    , http-types
+    , lens
+    , lens-aeson
+    , mtl
+    , postgresql-simple
+    , postgresql-simple-migration
+    , resource-pool
+    , safe
+    , scotty
+    , text
+    , transformers
+    , wai
+    , wai-cors
+    , wai-extra
+    , wai-middleware-static
+    , warp
+    , warp-tls
+  default-language: Haskell2010
+
+test-suite grocereye-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_grocereye
+  autogen-modules:
+      Paths_grocereye
+  hs-source-dirs:
+      test
+  default-extensions:
+      ConstraintKinds
+      DeriveAnyClass
+      DeriveGeneric
+      FlexibleContexts
+      OverloadedStrings
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.14 && <5
+    , blaze-html
+    , bytestring
+    , classy-prelude
+    , data-has
+    , filepath
+    , grocereye
+    , http-client
+    , http-client-tls
+    , http-types
+    , lens
+    , lens-aeson
+    , mtl
+    , postgresql-simple
+    , postgresql-simple-migration
+    , resource-pool
+    , safe
+    , scotty
+    , text
+    , transformers
+    , wai
+    , wai-cors
+    , wai-extra
+    , wai-middleware-static
+    , warp
+    , warp-tls
+  default-language: Haskell2010
